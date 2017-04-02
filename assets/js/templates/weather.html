@@ -1,0 +1,46 @@
+<div ng-controller="weatherCtrl" class="weather">
+
+  <div class="" layout="row" layout-align="center center">
+
+    <h1 class="md-display-2 currentTemp">
+      {{conditions.current_observation.temp_f}}°
+    </h1>
+
+    <div class="today box" layout="column" layout-align="center center">
+      <div class="icon">
+        <span class="wi wi-wu-{{forecasts.forecast.simpleforecast.forecastday[0].icon}}"></span>
+      </div>
+      <h1 class="md-subhead temp">
+        {{forecasts.forecast.simpleforecast.forecastday[0].high.fahrenheit}}°/{{forecasts.forecast.simpleforecast.forecastday[0].low.fahrenheit}}°
+      </h1>
+    </div>
+
+    <div class="box one" layout="column" layout-align="center center">
+      <div class="icon">
+        <span class="wi wi-wu-{{forecasts.forecast.simpleforecast.forecastday[1].icon}}"></span>
+      </div>
+      <h1 class="md-subhead temp">
+        {{forecasts.forecast.simpleforecast.forecastday[1].high.fahrenheit}}°/{{forecasts.forecast.simpleforecast.forecastday[1].low.fahrenheit}}°
+      </h1>
+    </div>
+
+    <div class="box two" layout="column" layout-align="center center">
+      <div class="icon">
+        <span class="wi wi-wu-{{forecasts.forecast.simpleforecast.forecastday[2].icon}}"></span>
+      </div>
+      <h1 class="md-subhead temp">
+        {{forecasts.forecast.simpleforecast.forecastday[2].high.fahrenheit}}°/{{forecasts.forecast.simpleforecast.forecastday[2].low.fahrenheit}}°
+      </h1>
+    </div>
+
+    <div class="box three" layout="column" layout-align="center center">
+      <div class="icon">
+        <span class="wi wi-wu-{{forecasts.forecast.simpleforecast.forecastday[3].icon}}"></span>
+      </div>
+      <h1 class="md-subhead temp">
+        {{forecasts.forecast.simpleforecast.forecastday[3].high.fahrenheit}}°/{{forecasts.forecast.simpleforecast.forecastday[3].low.fahrenheit}}°
+      </h1>
+    </div>
+  </div>
+
+</div>

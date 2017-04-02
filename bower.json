@@ -1,0 +1,20 @@
+{
+  "name": "homeapp",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "Samir"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1"
+  }
+}

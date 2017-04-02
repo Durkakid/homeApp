@@ -1,0 +1,22 @@
+<div class="container" ng-controller="NoteCtrl as vm">
+  <h1 class="md-display-1 sticky">Sticky Notes</h1>
+
+  <!-- Start Button Navigation -->
+  <div class="buttons">
+    <md-button id="new-sticky" class="highlight btn" ng-click="vm.addSticky()">
+      Create</md-button>
+    <md-button id="empty" class="highlight btn red" ng-click="vm.deleteAll()">
+      Delete All</md-button>
+  </div>
+  <!-- End Button Navigation -->
+
+  <!-- Start Container of Sticky Notes -->
+  <article id="edit-container">
+    <section ng-repeat="(id, msg) in vm.localStorage track by $index" class="card-panel" ng-if="vm.localStorage[id]" ng-style="{'background-color': tile.color}">
+      <div data-id="{{id}}">
+        <textarea type="text" data-id="{{id}}" ng-model="msg" ng-change="vm.updateLS(msg, id)" autoresize></textarea>
+        <md-button class="erase material-icons highlight" ng-click="vm.deleteSticky(id)">close</md-button>
+      </div>
+    </section>
+  </article>
+</div>
